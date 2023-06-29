@@ -1,6 +1,5 @@
 //alert("Hi from DOM Play!");
 
-
 /*
     
     Create an app that on click, actors lines are highlighted
@@ -13,7 +12,29 @@
     
     HTML "hooks" may be added to the page for proper operation
 
-
 */
 
 //document.querySelector(".hamlet").style.backgroundColor = "yellow";
+
+function highlight(el){
+
+    if (el.style.backgroundColor == 'white'){//orange
+        el.style.backgroundColor='orange';
+    }else{//white
+        el.style.backgroundColor='white';
+    }
+
+}
+
+function myAlert(){
+    alert("I'm clicked!");
+}
+
+
+
+const spans = document.querySelectorAll("#play span");
+console.log(spans);
+
+for(const mySpan of spans){
+    mySpan.addEventListener("click",myAlert);
+}
